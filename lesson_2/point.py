@@ -29,10 +29,13 @@ class Point:
         return (self._x - other.get_x(), self.get_y() - other.get_y(), self._z - other.get_z())
 
     def __mul__(self, other):
-        return (self._x * other.get_x(), self._y * other.get_y(), self._z * other.get_z())
+        return Point(self._x * other.get_x(), self._y * other.get_y(), self._z * other.get_z())
 
     def __div__(self, other):
-        return (self._x / other.get_x(), self._y / other.get_y(), self._z / other.get_z())
+       return (self._x / other.get_x(), self._y / other.get_y(), self._z / other.get_z())
+
+    def __repr__(self):
+        return "x = {}, y = {}, z = {}".format(self._x, self._y, self._z)
 
 p1 = Point(1, 2, 3)
 p2 = Point(1, 2, 3)

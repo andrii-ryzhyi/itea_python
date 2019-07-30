@@ -38,7 +38,7 @@ class Point:
         return "x = {}, y = {}, z = {}".format(self._x, self._y, self._z)
 
     def __neg__(self):
-        return Point(self * Point(-1, -1, -1))
+        return self * Point(-1, -1, -1)
 
 p1 = Point(1, 2, 3)
 p2 = Point(1, 2, 3)
